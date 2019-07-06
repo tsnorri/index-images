@@ -1,0 +1,9 @@
+[submodule "lib/LibRaw"]
+	path = lib/LibRaw
+	url = https://github.com/LibRaw/LibRaw.git
+[submodule "lib/libbio"]
+	path = lib/libbio
+	url = https://github.com/tsnorri/libbio.git
+[submodule "lib/sqlite_modern_cpp"]
+	path = lib/sqlite_modern_cpp
+	url = https://github.com/SqliteModernCpp/sqlite_modern_cpp.git
