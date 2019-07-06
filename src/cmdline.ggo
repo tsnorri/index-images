@@ -1,0 +1,12 @@
+# Copyright (c) 2019 Tuukka Norri
+# This code is licensed under MIT license (see LICENSE for details).
+
+package		"index_images"
+purpose		"Index RAW images into an SQLite database."
+usage		"index_images --image-root=... --database=..."
+description
+"Indexes RAW images into an SQLite database. Currently only ORF images are processed. If a .dop sidecar exists, the image rating is read from there."
+
+option	"image-root"				-	"Image file root"													string	typestr = "PATH"				required
+option	"database"					-	"Database file path"												string	typestr = "PATH"				required
+option	"project-name-from-parent"	-	"Treat the n-th parent folder name (1-based) as the project name"	short	typestr = "N"	default = "0"	optional
