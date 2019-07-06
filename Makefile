@@ -9,12 +9,12 @@ ifeq ($(shell uname -s),Linux)
 endif
 
 
-.PHONY: all clean-all clean clean-dependencies dependencies dist
+.PHONY: all clean-all clean clean-dependencies dependencies
 
 all: dependencies
 	$(MAKE) -C src all
 
-clean-all: clean clean-dependencies clean-dist
+clean-all: clean clean-dependencies
 
 clean:
 	$(MAKE) -C src clean
