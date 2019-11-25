@@ -60,7 +60,8 @@ namespace {
 				break;
 			}
 			
-			case 0x9201: // Shutter
+			//case 0x9201: // Shutter
+			case 0x829a: // Exposure
 			{
 				if (!ii::libraw_exif::read_single_rational(ds, type, len, ord, exif_properties.exposure_time))
 					std::cerr << "Unexpected value for shutter speed.\n";
