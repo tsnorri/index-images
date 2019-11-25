@@ -83,6 +83,30 @@ namespace {
 			
 			// Try to save time.
 			m_db << u8"PRAGMA journal_mode = OFF;";
+			
+			// Set up the schema.
+			m_db << u8""
+				"CREATE TABLE IF NOT EXISTS image (				"
+				"	id					INTEGER PRIMARY KEY,	"
+				"	project				TEXT,					"
+				"	filename			TEXT,					"
+				"	timestamp			INTEGER,				"
+				"	artist				TEXT,					"
+				"	copyright			TEXT,					"
+				"	make				TEXT,					"
+				"	model				TEXT,					"
+				"	lens_model			TEXT,					"
+				"	aperture			REAL,					"
+				"	focal_length		REAL,					"
+				"	iso					REAL,					"
+				"	exposure_time_n		INTEGER,				"
+				"	exposure_time_d		INTEGER,				"
+				"	exposure_program	INTEGER,				"
+				"	flash				INTEGER,				"
+				"	rank				INTEGER,				"
+				"	preview				BLOB					"
+				");												"
+			"";
 		}
 		
 		std::regex const &get_name_regex() const { return m_name_regex; }
