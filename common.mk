@@ -25,7 +25,7 @@ SYSTEM_LDFLAGS	?=
 
 CFLAGS			+= -std=c99   $(OPT_FLAGS) $(WARNING_FLAGS) $(SYSTEM_CFLAGS)
 CXXFLAGS		+= -std=c++17 $(OPT_FLAGS) $(WARNING_FLAGS) $(SYSTEM_CXXFLAGS)
-CPPFLAGS		+= $(SYSTEM_CPPFLAGS) -DHAVE_CONFIG_H -DLIBBIO_BOOST_SERIALIZATION -DLIBBIO_HAVE_SDSL -I../include -I../lib/exiv2/build -I../lib/exiv2/include -I../lib/LibRaw -I../lib/libbio/include -I../lib/libbio/lib/GSL/include -I../lib/libbio/lib/range-v3/include -I../lib/sqlite_modern_cpp/hdr $(BOOST_INCLUDE)
+CPPFLAGS		+= $(SYSTEM_CPPFLAGS) -DHAVE_CONFIG_H -DLIBBIO_BOOST_SERIALIZATION -DLIBBIO_HAVE_SDSL -I../include -I../lib/LibRaw -I../lib/libbio/include -I../lib/libbio/lib/GSL/include -I../lib/libbio/lib/range-v3/include -I../lib/sqlite_modern_cpp/hdr $(BOOST_INCLUDE)
 LDFLAGS			+= $(SYSTEM_LDFLAGS) $(BOOST_LIBS) $(LIBDISPATCH_LIBS)
 
 ifeq ($(shell uname -s),Linux)
